@@ -1,6 +1,6 @@
 <?php include '../view/header.php'; ?>
 <main>
-    <h1>Add Product</h1>
+    <h1>Add Tasks:</h1>
     <form action="index.php" method="post" id="add_product_form">
         <input type="hidden" name="action" value="add_product">
         
@@ -13,21 +13,21 @@
         <?php endforeach; ?>
         </select>
         <br>
-
+        <!-- need to remove
         <label>Item Num:</label>
         <input type="text" name="code" />
         <br>
-
+        -->
         <label>Title:</label>
-        <input type="text" name="name" />
+        <input type="text" name="name" required />
         <br>
 
-        <label>Description</label>
-        <input type="text" name="name" />
+        <label>Description:</label>
+        <input type="text" name="name" required />
         <br>
 
         <label>&nbsp;</label>
-        <input type="submit" value="Add Task" />
+        <input type="submit" value="Add Me!" />
         <br>
     </form>
     <p class="last_paragraph">

@@ -26,25 +26,26 @@
                 <th>Description</th>
                 <th>&nbsp;</th>
             </tr>
-            <?php foreach ($todoitems as $todoitem) : ?>
+            <?php foreach ($tasks as $task) : ?>
             <tr>
-                <td><?php echo $todoitem['itemNum']; ?></td>
-                <td><?php echo $todoitem['title']; ?></td>
-                <td><?php echo $todoitem['description']; ?></td>
+                <td><?php echo $tasks['itemNum']; ?></td>
+                <td><?php echo $tasks['title']; ?></td>
+                <td><?php echo $tasks['description']; ?></td>
+                <td><?php echo $tasks['categoryID']; ?></td>
                 <td><form action="." method="post">
                     <input type="hidden" name="action"
-                           value="delete_product">
+                           value="delete_task">
                     <input type="hidden" name="item_num"
-                           value="<?php echo $todoitem['itemNum']; ?>">
+                           value="<?php echo $tasks['itemNum']; ?>">
                     <input type="hidden" name="category_id"
-                           value="<?php echo $todoitem['categoryID']; ?>">
+                           value="<?php echo $tasks['categoryID']; ?>">
                     <input type="submit" value="Delete">
                 </form></td>
             </tr>
             <?php endforeach; ?>
         </table>
         <p class="last_paragraph">
-            <a href="?action=show_add_form">Add task</a>
+            <a href="?action=show_add_form">Click Here to Add More Tasks</a>
         </p>
     </section>
 </main>
